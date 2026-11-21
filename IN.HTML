@@ -1,0 +1,165 @@
+<section id="home">
+    <STYLE>
+        /* =========================================
+   HOME HERO SECTION (Split Layout)
+========================================= */
+#home {
+  position: relative;
+  min-height: 85vh;
+  padding: 60px 6%;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr; /* Left: Text, Right: Featured Image */
+  align-items: center;
+  gap: 40px;
+  overflow: hidden;
+  color: #ffffff;
+}
+
+/* 1. Full-Section Background Image (school.png) */
+#herobg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+/* Royal Blue Gradient Tint over school.png for readability */
+#home::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(6, 42, 132, 0.92) 0%,    /* Strong Royal Blue behind text */
+    rgba(6, 42, 132, 0.78) 60%,
+    rgba(6, 42, 132, 0.65) 100%
+  );
+  z-index: -1;
+}
+
+/* 2. Left Column: Text & Button */
+#home div {
+  grid-column: 1;
+  grid-row: 1;
+  z-index: 1;
+}
+
+#firstp {
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 20px;
+  text-shadow: 2px 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+.welcomehome {
+  display: inline-block;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #facc15;                 /* Gold Accent */
+  letter-spacing: 2px;
+  margin-bottom: 6px;
+}
+
+.secp {
+  max-width: 560px;               /* Limits paragraph width */
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #f1f5f9;
+  margin-bottom: 30px;
+}
+
+/* Remove forced <br> tags inside paragraph so it wraps smoothly */
+.secp br {
+  display: none;
+}
+
+/* Gold "Learn More" Button */
+.homebttn {
+  background-color: #facc15;
+  color: #062a84;
+  border: 2px solid #facc15;
+  padding: 14px 32px;
+  font-size: 1rem;
+  font-weight: 800;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+}
+
+.homebttn:hover {
+  background-color: transparent;
+  color: #facc15;
+  transform: translateY(-2px);
+}
+
+/* 3. Right Column: Featured Image (banner image2.png) */
+#heroimg {
+  grid-column: 2;
+  grid-row: 1;
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  justify-self: center;
+  border-radius: 16px;
+  border: 4px solid #facc15;      /* Gold frame around featured image */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+@media (max-width: 900px) {
+  #home {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 50px 5%;
+  }
+
+  #home div {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .secp {
+    margin: 0 auto 25px auto;
+  }
+
+  #heroimg {
+    grid-column: 1;
+    grid-row: 2;
+    max-width: 380px;
+  }
+
+  #firstp {
+    font-size: 2.1rem;
+  }
+}
+
+    </STYLE>
+  <img src="school.png" alt="hero bg" id="herobg">
+  <img src="banner image2.png" alt="Students" id="heroimg">
+  <div>
+    <h1 id="firstp">
+      <span class="welcomehome">WELCOME TO</span> <br>
+      KIGALI STAR BRIGHT <br>
+      FUTURE ACADEMY
+    </h1>
+    <p class="secp">
+      Kigali Star Bright Future Academy (KSBFA) is a private school in Kigali, Rwanda, 
+      offering quality education from Nursery to Secondary level. We nurture young 
+      minds through academic excellence, discipline, and creativity to inspire future 
+      leaders.
+    </p>
+    <button class="homebttn">Learn More</button>
+  </div>
+</section>

@@ -1,0 +1,386 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: white;
+    border: 0px solid white;
+    box-shadow: 0 0 6px;
+    text-decoration: none;
+}
+
+.logopart {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    text-decoration: none;
+}
+
+
+.logopart img {
+    grid-row: 1 / 3;
+    height: 60px;
+    width: auto;
+}
+
+
+nav a {
+    color: black;
+    text-decoration: none;
+    margin: 30px;
+    font-weight: bold;
+}
+
+.logopart h3 {
+    color: royalblue;
+    font-size: 25px;
+
+}
+
+.mottoinheader {
+    color: rgb(47, 76, 161);
+    font-weight: bolder;
+    font-style: italic;
+    padding-bottom: 10px;
+}
+
+button{
+    padding: 7px;
+    background-color: rgb(243, 203, 0);
+    border: 1px solid rgb(243, 203, 0);
+    border-radius: 7px;
+}
+
+#home p{
+    color: white;
+}
+
+#home #herobg {
+    margin-left: -30px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    object-fit: cover;
+    height: auto;
+    width: 100%;
+    z-index: -1;
+    filter: brightness(50% );
+}
+
+#home #heroimg {
+    height: 300px;
+    width: auto;
+    position: relative;
+    left: 50%;
+    top: 50px;
+    border-radius: 5px;
+}
+
+#home div {
+    margin-left: 30px;
+    padding-bottom: 200px;
+    margin-top: 50px;
+    text-shadow: 2px 2px 8px black;
+    position: relative;
+    bottom: 300px;
+    
+    
+}
+
+#home h1 {
+    color: rgb(243, 203, 0);
+    font-size: xx-large;
+}
+
+#home h1 span{
+    color: white;
+    font-size: large;
+    position: relative;
+    left: 50px;
+}
+
+.homebttn {
+   margin-top: 10px;
+    padding: 7px;
+    background-color: rgb(243, 203, 0);
+    border: 1px solid rgb(243, 203, 0);
+    border-radius: 7px;
+    font-weight: bold;
+    
+}
+
+
+
+.about-us {
+    margin-top: -400px;
+    margin-left: 5px;
+}
+
+.about-header h2 {
+    font-size: 50px;
+    color: royalblue;
+    border-left: 4px solid rgb(243, 203, 0);
+    padding: 4px;
+    border-radius: 4px;
+
+}
+
+.about-header {
+    padding-bottom: 50px;
+
+}
+
+.school-info {
+    margin-left: 10px;
+}
+
+.school-info h2 {
+    margin-left: 20px;
+    font-size: 40px;
+    color: royalblue;
+    background-image: linear-gradient(to right, rgb(243, 203, 0), rgb(243, 203, 0));
+    background-repeat: no-repeat;
+    background-size: 250px 4px;
+    background-position: left bottom;
+}
+
+.school-info p{
+
+}
+
+
+
+/* =========================================
+   1. THEME VARIABLES (Royal Blue & Gold)
+   ========================================= */
+:root {
+  --royal-blue: #1e3a8a;       /* Deep Royal Blue */
+  --royal-bright: #1d4ed8;     /* Vibrant Royal Blue */
+  --gold: #d97706;             /* Rich Gold */
+  --gold-light: #fbbf24;       /* Bright Gold Accent */
+  --bg-light: #f8fafc;         /* Soft Off-White Page Background */
+  --text-dark: #1e293b;
+}
+
+#academics {
+  background-color: #f8fafc;
+  color: #1e293b;
+  padding-bottom: 60px;
+}
+
+/* =========================================
+   2. BANNER SECTION (With Background Image)
+   ========================================= */
+.bannersection {
+  position: relative;
+  height: 50vh;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  text-align: left;
+  color: #ffffff;
+  padding: 20px;
+  overflow: hidden;
+  /* Royal Blue gradient tint over the image */
+  background-image: url(banner\ image.png);
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center center;
+}
+
+.bannersection img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* First <p>: Main Banner Title */
+.bannersection p:first-of-type {
+  font-size: 2.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+  text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.5);
+  border-bottom: 4px solid #fbbf24;
+  padding-bottom: 8px;
+  color: royalblue;
+  font-size: 100px;
+}
+
+/* Second <p>: Subtitle */
+.bannersection p:last-of-type {
+  font-size: 1.2rem;
+  font-style: italic;
+  color:  #fbbf24;
+  max-width: 600px;
+  text-shadow: 1px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+/* =========================================
+   3. EDUCATION LEVELS & TABLES
+   ========================================= */
+.educationlevels {
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+.programs, .subjects {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(30, 58, 138, 0.08);
+  border-top: 5px solid var(--royal-blue);
+}
+
+.educationlevels h3 {
+  color: var(--royal-blue);
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  display: inline-block;
+  border-bottom: 3px solid var(--gold);
+  padding-bottom: 4px;
+}
+
+.programs p {
+  max-width: 65ch;            /* Limits paragraph width for readability */
+  color: #475569;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* Styling Both Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+thead {
+  background-color: var(--royal-blue);
+  color: #ffffff;
+}
+
+th {
+  padding: 14px 18px;
+  text-align: left;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border-bottom: 3px solid var(--gold);
+}
+
+td {
+  padding: 14px 18px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* Highlight the "Level" column in bold Royal Blue */
+td:first-child {
+  font-weight: 700;
+  color: var(--royal-blue);
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f1f5f9;
+}
+
+tbody tr:hover {
+  background-color: #fef3c7;  /* Soft gold highlight on hover */
+  transition: background-color 0.2s ease;
+}
+
+/* =========================================
+   4. BOTTOM 3 CARDS (.lastdiv)
+   ========================================= */
+.lastdiv {
+  max-width: 1100px;
+  margin: 40px auto 0;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.additional, .teachapproach, .acchighlights {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  border-left: 5px solid var(--gold);
+  transition: transform 0.3s ease;
+}
+
+.additional:hover, .teachapproach:hover, .acchighlights:hover {
+  transform: translateY(-5px);
+}
+
+.lastdiv h3 {
+  color: var(--royal-blue);
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.lastdiv ul, .lastdiv ol {
+  padding-left: 20px;
+  line-height: 1.8;
+  color: #334155;
+}
+
+/* Color the bullet points & numbers Gold */
+.lastdiv li::marker {
+  color: var(--gold);
+  font-weight: bold;
+}
+
+/* Make the Highlights card stand out in Royal Blue */
+.acchighlights {
+  background-color: var(--royal-blue);
+  color: #ffffff;
+  border-left: 5px solid var(--gold-light);
+}
+
+.acchighlights h3 {
+  color: var(--gold-light);
+  border-bottom-color: rgba(255, 255, 255, 0.2);
+}
+
+.acchighlights li {
+  color: #f8fafc;
+}
+
+/* =========================================
+   5. MOBILE RESPONSIVENESS
+   ========================================= */
+@media (max-width: 600px) {
+  .bannersection p:first-of-type {
+    font-size: 2rem;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto; /* Allows horizontal scroll on small phones */
+  }
+}
